@@ -45,7 +45,6 @@ pair<int*, bool> del(int* array, int n) {
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    
     cout << "Введите размер массива от 1 до 100\n";
     int n; 
     cin >> n;
@@ -72,6 +71,11 @@ int main() {
                 n--;
                 array = result.first;
                 cout << "Элемент после последнего максимального элемента массива удален\n";
+                cout << "Теперь массив выглядит так:\n";
+                for (int i = 0; i < n; ++i) {
+                    cout << array[i] << ' ';
+                }
+                cout << endl;
             }
         }
         else

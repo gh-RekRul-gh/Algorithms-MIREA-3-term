@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    int array[100] = { 0 };
+    int array[100] = {0};
     cout << "Введите размер массива от 1 до 100\n";
     int n;
     cin >> n;

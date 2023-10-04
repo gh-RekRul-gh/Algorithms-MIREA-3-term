@@ -7,14 +7,14 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Russian");
     string email;
-    char array[1000];
     cout << "Введите почту\n";
     cin >> email;
     int size = email.size();
-    email.copy(array, size);
     int counter = 0;
+    bool found = false;
     for (int i = 0; i < size; ++i) {
-        if (array[i] == '@') {
+        if (email[i] == '@') {
+            found = true;
             if (i == size - 1) {
                 cout << "Почта неверна, нет домена";
                 return 0;
@@ -22,7 +22,7 @@ int main() {
             else
                 break;
         }
-        else if (array[i] == '.') {
+        else if (email[i] == '.') {
             if (counter) {
                 cout << "Почта неверна, в имени пользователя могут быть только одиночные точки";
                 return 0;
@@ -34,6 +34,9 @@ int main() {
             counter = 0;
         
     }
-    cout << "Почта верна";
+    if (!found)
+        cout << "Не почта";
+    else 
+        cout << "Почта верна";
     return 0;
 }

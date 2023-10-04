@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Russian");
     string text;
-    cout << "Введите текст\n";
+    cout << "Введите текст в одну строку\n";
     getline(cin, text);
     int answer = 0;
     int size = text.size();

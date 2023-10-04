@@ -2,10 +2,11 @@
 #include <vector>
 #include <cmath>
 #include <string>
+#include <windows.h>
 
 using namespace std;
 
-int find_in_vect(char elem, vector<char>& vect, int start, int end) {
+int find_in_vector(char elem, vector<char>& vect, int start, int end) {
     for (int i = start; i < end; ++i) {
         if (elem == vect[i]) return i;
     }
@@ -33,6 +34,9 @@ string convFrom10(string num, int res_base, vector<char> &symbols) {
 }
 
 int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
     string num;
     int q, p;
     vector<char> symbols = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'F', 'E' };
@@ -46,7 +50,7 @@ int main() {
     cout << "Enter the number you want to convert\n";
     cin >> num;
     for (int i = 0; i < num.size(); ++i) {
-        if (find_in_vect(num[i], symbols, 0, q) == -1) {
+        if (find_in_vector(num[i], symbols, 0, q) == -1) {
             cout << "Wrong input, not a number or number doesn't exist in this number system";
             return 0;
         }

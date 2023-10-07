@@ -121,7 +121,6 @@ int main() {
             printMatrix(matrix, n, m);
             sortMatrix(matrix, n, m);
             printMatrix(matrix, n, m);
-            cout << "Конец работы программы";
             break;
         }
         case 2: {
@@ -130,7 +129,6 @@ int main() {
             printMatrix(matrix, n, m);
             sortMatrix(matrix, n, m);
             printMatrix(matrix, n, m);
-            cout << "Конец работы программы";
             break;
         }
         default: {
@@ -139,5 +137,7 @@ int main() {
             break;
         }
     }
+
+    cout << "Конец работы программы";
     return 0;
 }

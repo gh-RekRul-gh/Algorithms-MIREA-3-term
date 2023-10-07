@@ -74,7 +74,7 @@ void printExamsToBinFile(vector<Exam>& arr) {
     return; 
 }
 
-vector<Exam> readFromBinFile() {
+     {
     ifstream fin("binfile.bin", std::ios::binary);
     vector<Exam> ans;
     int n;
@@ -90,7 +90,7 @@ vector<Exam> readFromBinFile() {
         fin.read(reinterpret_cast<char*>(&disciplineSize), sizeof(disciplineSize));
         fin.read(buffer, disciplineSize);
         temp.discipline = buffer;
-        fin.read(reinterpret_cast<char*>(&temp.term), sizeof(temp.term));
+        fin.read(reinterpret_cast<char*>(&temp.term), sizeof(temp.term));   
         fin.read(reinterpret_cast<char*>(&temp.mark), sizeof(temp.mark));
         ans.push_back(temp);
     }
@@ -102,7 +102,7 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    vector<Exam> arr;
+    vector<Exam> arr;   
     fillExams(arr);
     cout << "До сортировки:\n";
     printExams(arr);

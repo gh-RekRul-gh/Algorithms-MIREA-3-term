@@ -16,7 +16,10 @@ int find_in_vector(char elem, vector<char>& vect, int start, int end) {
 string convTo10(string num, int cur_base) {
     int x = 0;
     for (int i = 0; i < num.size(); ++i) {
-        x = (x * cur_base) + (num[i] - '0');
+        if (isdigit(num[i]))
+            x = (x * cur_base) + (num[i] - '0');
+        else
+            x = (x * cur_base) + ((num[i] - 'A') + 10);
     }
     return to_string(x);
 }

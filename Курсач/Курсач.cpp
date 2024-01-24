@@ -6,6 +6,10 @@
 
 using namespace std;
 
+// В этом файле писались функции для дальнейшего написания курсовой работы
+// с граф. интерфейсом, код которой есть в репозитории
+// https://github.com/gh-RekRul-gh/Kursovaya_AOOD_3_term
+
 int find_in_vector(char elem, vector<char>& vect, int start, int end) {
     for (int i = start; i < end; ++i) {
         if (elem == vect[i]) return i;

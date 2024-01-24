@@ -2,8 +2,12 @@
 #include <cmath>
 #include <vector>
 #include <string>
+#include <windows.h>
 
 using namespace std;
+
+// Разработать программу, использующую рекурсивную функцию для выполнения задания.
+// Задание - Вывод на экран строки в обратном порядке
 
 void printReversedString(string& str, int cur) {
     if (cur == str.size() - 1) {
@@ -16,11 +20,12 @@ void printReversedString(string& str, int cur) {
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     string str;
-    cout << "Введите строку\n";
+    cout << "Enter a string\n";
     getline(cin, str);
-    cout << "Перевернутая строка:\n";
+    cout << "Reversed given string:\n";
     printReversedString(str, 0);
     return 0;
 }
